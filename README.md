@@ -33,7 +33,7 @@ rails g task <namespace> <task>
 For example:
 
 ```ruby
-rails g task users:update_some_field
+rails g task users update_some_field
 ```
 
 This will generate a file under 'lib/tasks/rake_migrations' with a timestamp and the following content:

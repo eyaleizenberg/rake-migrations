@@ -11,6 +11,7 @@ module RakeMigrations
     def create_migration_file
       migration_template "migration.rb", "db/migrate/create_rake_migrations_table.rb"
       template("rake_migrations_check.rb", "config/rake_migrations_check.rb")
+      template("rake_migration.rb", "models/rake_migration.rb")
       write_to_post_merge_hook
     end
 
