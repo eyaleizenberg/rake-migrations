@@ -23,7 +23,7 @@ rails g rake_migrations:install
 rake db:migrate
 ```
 
-Finally, open the file 'config/rake_migrations_check.rb' and replace "<database name>" with your database's name:
+Finally, open the file 'config/rake_migrations_check.rb' in your project and replace "database name" with your database's name (remove smaller/greater than):
 
 ```ruby
 client = Mysql2::Client.new(host: "localhost", username: "root", database: "<database name>")
