@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "A gem to easily keep track of rake tasks"
   s.description = "This gem creates a rake_migrations table and keeps track of rake tasks similar to migrations."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2"
