@@ -83,4 +83,6 @@ rake users:update_some_field
 ## Issues, suggestions and forks.
 Feel free to open issues, send suggestions and fork this repository.
 
+This gem was developed during my work at [Samanage](http://example.net/).
+
 Thanks and Enjoy! :)
