@@ -1,6 +1,8 @@
 Rake Migrations
 ===============
+[![GitHub version](https://badge.fury.io/gh/eyaleizenberg%2Frake-migrations.png)](http://badge.fury.io/gh/eyaleizenberg%2Frake-migrations)
 [![Build Status](https://travis-ci.org/eyaleizenberg/rake-migrations.svg?branch=master)](https://travis-ci.org/eyaleizenberg/rake-migrations)
+[![Code Climate](https://codeclimate.com/github/eyaleizenberg/rake-migrations/badges/gpa.svg)](https://codeclimate.com/github/eyaleizenberg/rake-migrations)
 
 This gem helps you and your team members keep track of 'run once' rake tasks.
 
