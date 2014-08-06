@@ -10,7 +10,7 @@ If you can help by testing this on different versions, databases and platforms, 
 ## Installation
 First, add this this to your gemfile:
 ```ruby
-gem 'pry-byebug'
+gem 'rake_migrations'
 ```
 
 Then, run:
