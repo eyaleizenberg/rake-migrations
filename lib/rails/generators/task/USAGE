@@ -1,0 +1,8 @@
+Description:
+    This generator will create rake tasks with a time stamp and default messages.
+
+Example:
+    rails generate task incidents convert_x_to_y
+
+    This will create:
+        lib/tasks/rake_migrations/[time_stamp]incidents.rake

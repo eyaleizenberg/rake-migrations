@@ -1,0 +1,2 @@
+module RakeMigrations
+end
