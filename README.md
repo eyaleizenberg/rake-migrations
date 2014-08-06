@@ -1,5 +1,6 @@
 Rake Migrations
 ===============
+[![Build Status](https://travis-ci.org/eyaleizenberg/rake-migrations.svg?branch=master)](https://travis-ci.org/eyaleizenberg/rake-migrations)
 
 This gem helps you and your team members keep track of 'run once' rake tasks.
 
