@@ -8,12 +8,12 @@ At the moment I have only tested this on Rails 3.2.X running mysql2 on Mac OS X.
 If you can help by testing this on different versions, databases and platforms, let me know.
 
 ## Installation
-1. Add this this to your gemfile:
+First, add this this to your gemfile:
 ```ruby
 gem 'pry-byebug'
 ```
 
-2. Run:
+Then, run:
 ```ruby
 bundle install
 rails g rake_migrations:install
@@ -25,7 +25,6 @@ Whenever somebody from your team wants to create a new run once task, simply gen
 
 ```ruby
 rails g task <namespace> <task>
-rails g task users:update_some_field
 ```
 
 For example:
@@ -38,12 +37,12 @@ This will generate a file under 'lib/tasks/rake_migrations' with a timestamp and
 
 ```ruby
 # Checklist:
-# 1. Re-runnable on production
+# 1. Re-runnable on production?
 # 2. Is there a chance emails will be sent?
 # 3. puts ids & logs (progress log)
 # 4. Can you update the records with an update all instead of instantizing?
 # 5. Are there any callbacks?
-# 6. Performance
+# 6. Performance issues?
 # 7. Scoping to account
 
 namespace :users do
@@ -56,7 +55,7 @@ namespace :users do
 end
 ```
 
-Simply insert your code above the "DO NOT REMOVE THIS PART" line. Afterwards you can run the rake task normally:
+Simply insert your code above the "DO NOT REMOVE THIS PART" line. The checklist is there to help you and the person who is code-reviewing your code to think of problems that might occur from your rake task. Afterwards you can run the rake task normally:
 
 ```ruby
 rake users:update_some_field
@@ -64,7 +63,7 @@ rake users:update_some_field
 
 Commit your new file into your repository.
 
-Afterwards, through the magic of git-hooks, whenever someone pulls this branch (or if it's already merged into the master branch), he will see a message in the terminal telling him which rakes need to be run:
+Afterwards, through the magic of git-hooks, whenever someone pulls this branch (or a branch that has this file in it), he will see a message in the terminal telling him which rakes need to be run:
 
 ```ruby
 You need to run the following rakes:
@@ -72,4 +71,7 @@ You need to run the following rakes:
 rake users:update_some_field
 ```
 
-This project rocks and uses MIT-LICENSE.
+## Issues, suggestions and forks.
+Feel free to open issues, send suggestions and fork this repository.
+
+Thanks and Enjoy! :)
