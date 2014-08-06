@@ -10,6 +10,7 @@ module RakeMigrations
 
     def create_migration_file
       migration_template "migration.rb", "db/migrate/create_rake_migrations_table.rb"
+      template("rake_migrations_check.rb", "config/rake_migrations_check.rb")
     end
   end
 end
