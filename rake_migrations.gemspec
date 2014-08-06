@@ -5,7 +5,7 @@ require "rake_migrations/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "rake-migrations"
+  s.name        = "rake_migrations"
   s.version     = RakeMigrations::VERSION
   s.authors     = ["Eyal Eizenberg"]
   s.email       = ["iz.eyal@gmail.com"]
