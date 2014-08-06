@@ -2,7 +2,7 @@ require 'mysql2'
 
 module RakeMigrationsCheck
   def self.check
-    client = Mysql2::Client.new(host: "localhost", username: "root", database: "samanage_development")
+    client = Mysql2::Client.new(host: "localhost", username: "root", database: "<database name>")
     results = client.query("select * from rake_migrations").map {|res| res["version"] }
     rake_migrations_lib = "#{`pwd`.strip}/lib/tasks/rake_migrations/*"
 

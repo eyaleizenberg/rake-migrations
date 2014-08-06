@@ -23,6 +23,12 @@ rails g rake_migrations:install
 rake db:migrate
 ```
 
+Finally, open the file 'config/rake_migrations_check.rb' and replace "<database name>" with your database's name:
+
+```ruby
+client = Mysql2::Client.new(host: "localhost", username: "root", database: "<database name>")
+```
+
 ## Use
 Whenever somebody from your team wants to create a new run once task, simply generate it by running:
 
