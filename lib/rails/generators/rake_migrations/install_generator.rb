@@ -1,7 +1,6 @@
 require 'rails/generators'
 require 'rails/generators/migration'
 require 'rails/generators/active_record'
-require 'pry'
 
 module RakeMigrations
   class InstallGenerator < Rails::Generators::Base

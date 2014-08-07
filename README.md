@@ -7,7 +7,7 @@ Rake Migrations
 This gem helps you and your team members keep track of 'run once' rake tasks.
 
 ## Requirements
-At the moment I have only tested this on Rails 3.2.X running mysql2 on Mac OS X.
+At the moment I have only tested this on Rails 3.2.X running mysql (uses mysql2 gem) or postgresql on Mac OS X.
 If you can help by testing this on different versions, databases and platforms, let me know.
 
 ## Installation
@@ -19,7 +19,14 @@ gem 'rake_migrations'
 Then, run:
 ```ruby
 bundle install
+
+# For mysql
 rails g rake_migrations:install
+
+# For postgresql
+rails g rake_migrations:install pg
+
+# Don't forget to migrate (both for mysql and pg)
 rake db:migrate
 ```
 
