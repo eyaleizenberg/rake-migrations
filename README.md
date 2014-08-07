@@ -68,7 +68,9 @@ This will generate a file under 'lib/tasks/rake_migrations' with a timestamp and
 namespace :users do
   desc "update run_at field to get value as in start_time"
   task update_some_field: [:environment] do
-
+    # EXAMPLE 
+    User.update_all({role_id: 1}, {role_id: 2})
+    
     # DO NOT REMOVE THIS PART
     RakeMigration.find_or_create_by_version(__FILE__[/\d+/])
   end
