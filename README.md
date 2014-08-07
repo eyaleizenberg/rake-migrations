@@ -23,10 +23,14 @@ rails g rake_migrations:install
 rake db:migrate
 ```
 
-Finally, open the file 'config/rake_migrations_check.rb' in your project and replace "database name" with your database's name (remove smaller/greater than):
+Finally, open the file 'config/rake_migrations_check.rb' in your project and replace "database name" with your database's name and the "username" with your database's username (remove smaller/greater than symbols):
 
 ```ruby
-client = Mysql2::Client.new(host: "localhost", username: "root", database: "<database name>")
+# For mysql2
+client = Mysql2::Client.new(host: "localhost", username: "<username>", database: "<database name>")
+
+# For postgresql
+client = PG.connect(host: "localhost", user: "<username>", dbname: "<database name>")
 ```
 
 ## Use

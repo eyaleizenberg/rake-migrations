@@ -1,6 +1,7 @@
 require 'rails/generators'
 require 'rails/generators/migration'
 require 'rails/generators/active_record'
+require 'pry'
 
 module RakeMigrations
   class InstallGenerator < Rails::Generators::Base
@@ -10,7 +11,13 @@ module RakeMigrations
 
     def create_migration_file
       migration_template "migration.rb", "db/migrate/create_rake_migrations_table.rb"
-      template("rake_migrations_check.rb", "config/rake_migrations_check.rb")
+
+      if args.first == "pg"
+        template("rake_migrations_check_pg.rb", "config/rake_migrations_check.rb")
+      else
+        template("rake_migrations_check.rb", "config/rake_migrations_check.rb")
+      end
+
       write_to_post_merge_hook
     end
 
