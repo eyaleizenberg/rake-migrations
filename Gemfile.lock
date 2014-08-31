@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    rake_migrations (1.0.4)
+    rake_migrations (1.0.5)
       mysql2
-      rails (~> 3.2)
+      rails (> 3.2)
 
 GEM
   remote: https://rubygems.org/
@@ -104,7 +104,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.40)
+    tzinfo (0.3.41)
 
 PLATFORMS
   ruby
