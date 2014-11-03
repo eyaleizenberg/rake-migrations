@@ -15,5 +15,4 @@ namespace :users do
     # DO NOT REMOVE THIS PART
     RakeMigration.find_or_create_by_version(__FILE__[/\d+/])
   end
-
 end

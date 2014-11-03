@@ -5,6 +5,7 @@ group :test do
   gem 'mocha'
   gem 'rspec'
   gem 'generator_spec'
+  gem 'pry-byebug'
 end
 
 gemspec
