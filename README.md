@@ -68,14 +68,16 @@ This will generate a file under 'lib/tasks/rake_migrations' with a timestamp and
 namespace :users do
   desc "update run_at field to get value as in start_time"
   task update_some_field: [:environment] do
-    # EXAMPLE 
+    # EXAMPLE
     User.update_all({role_id: 1}, {role_id: 2})
-    
+
     # DO NOT REMOVE THIS PART
     RakeMigration.find_or_create_by_version(__FILE__[/\d+/])
   end
 end
 ```
+
+Update: If you are using Rails 4 or greater, the find_or_create_by_version has been changed to find_or_create_by(version: __FILE__[/\d+/]).
 
 Simply insert your code above the "DO NOT REMOVE THIS PART" line. The checklist is there to help you and the person who is code-reviewing your code to think of problems that might occur from your rake task. Afterwards you can run the rake task normally:
 
