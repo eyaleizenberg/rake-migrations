@@ -1,7 +1,6 @@
 require "generator_spec"
 require "rails/generators/task/task_generator"
 require 'rails'
-require 'pry-byebug'
 
 describe TaskGenerator do
   destination File.expand_path("../../tmp", __FILE__)
