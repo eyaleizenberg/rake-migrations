@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rake_migrations (1.0.7)
+    rake_migrations (1.0.8)
       mysql2
       rails (> 3.2)
 
