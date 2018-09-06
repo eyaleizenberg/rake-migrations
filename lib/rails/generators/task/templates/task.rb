@@ -14,11 +14,7 @@ namespace :<%= file_name %> do
 
 
     # DO NOT REMOVE THIS PART
-<% if Rails.version.to_i < 4 -%>
-    RakeMigration.find_or_create_by_version(__FILE__[/\d+/])
-<% else -%>
-    RakeMigration.find_or_create_by(version: __FILE__[/\d+/])
-<% end -%>
+    RakeMigration.mark_complete(__FILE__)
   end
 <% end -%>
 end
