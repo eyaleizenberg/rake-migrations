@@ -6,12 +6,13 @@ module RakeMigrationsCheck
     results = client.query("select * from rake_migrations").map {|res| res["version"] }
     rake_migrations_lib = "#{`pwd`.strip}/lib/tasks/rake_migrations/*"
 
-    rake_files = Dir[rake_migrations_lib].map do |file|
-      if !results.include?(file[/\d+/])
+    rake_files = Dir[rake_migrations_lib].sort.map do |file|
+      rake_id = RakeMigration.version_from_path(file)
+      if !results.include?(rake_id)
         file = File.read(file)
-        namespace = file[/namespace :(.*?)do/m, 1].strip
-        task = file[/task (.*?):/m, 1]
-        "rake #{namespace}:#{task}"
+        namespace = file[/namespace :?([^: ,]*)/m, 1].strip
+        task = file[/task :?([^ :,]*)/m, 1]
+        "rake #{namespace}:#{task} # #{rake_id}"
       end
     end.compact
 
