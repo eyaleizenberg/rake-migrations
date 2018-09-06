@@ -33,7 +33,7 @@ describe TaskGenerator do
     end
 
     it "should have the RakeMigration update" do
-      assert_file "lib/tasks/rake_migrations/#{@timestamp}_users.rake", /RakeMigration.find_or_create_by\(version\:/
+      assert_file "lib/tasks/rake_migrations/#{@timestamp}_users.rake", /RakeMigration.mark_complete/
     end
   end
 
@@ -53,7 +53,7 @@ describe TaskGenerator do
     end
 
     it "should have the RakeMigration update" do
-      assert_file "lib/tasks/rake_migrations/#{@timestamp}_users.rake", /RakeMigration.find_or_create_by_version/
+      assert_file "lib/tasks/rake_migrations/#{@timestamp}_users.rake", /RakeMigration.mark_complete/
     end
   end
 end
