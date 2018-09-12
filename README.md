@@ -72,12 +72,10 @@ namespace :users do
     User.update_all({role_id: 1}, {role_id: 2})
 
     # DO NOT REMOVE THIS PART
-    RakeMigration.find_or_create_by_version(__FILE__[/\d+/])
+    RakeMigration.mark_complete(__FILE__)
   end
 end
 ```
-
-Update: If you are using Rails 4 or greater, the find_or_create_by_version has been changed to find_or_create_by(version: __FILE__[/\d+/]).
 
 Simply insert your code above the "DO NOT REMOVE THIS PART" line. The checklist is there to help you and the person who is code-reviewing your code to think of problems that might occur from your rake task. Afterwards you can run the rake task normally:
 
