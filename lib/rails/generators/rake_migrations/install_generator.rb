@@ -20,6 +20,10 @@ module RakeMigrations
       write_to_post_merge_hook
     end
 
+    def self.next_migration_number(dirname)
+      ActiveRecord::Generators::Base.next_migration_number dirname
+    end
+
     def write_to_post_merge_hook
       post_merge_file = ".git/hooks/post-merge"
       what_to_write = <<-TEXT

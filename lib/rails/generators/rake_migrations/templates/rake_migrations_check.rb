@@ -1,4 +1,5 @@
 require 'mysql2'
+require 'rake_migrations'
 
 module RakeMigrationsCheck
   def self.check
